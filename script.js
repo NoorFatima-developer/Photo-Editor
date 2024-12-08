@@ -22,6 +22,7 @@ const loadImage = () => {
     if (!file) return; // Return if user hasn't selected a file...
     previewImg.src = URL.createObjectURL(file); // Pass file URL as preview img src
     previewImg.addEventListener('load', () => {
+        resetFilterBtn.click();   
         document.querySelector(".container").classList.remove('disable');
     });
 };
