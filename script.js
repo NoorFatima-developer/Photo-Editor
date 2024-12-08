@@ -6,6 +6,8 @@ const filterName = document.querySelector('.filter-info .name');
 const filterValue = document.querySelector('.filter-info .value');
 const filterSlider = document.querySelector('.filter input');
 
+let brightness = 100, saturation = 100, inversion = 0, grayscale = 0;
+
 const loadImage = () => {
     const file = fileInput.files[0];
     if (!file) return; // Return if user hasn't selected a file...
