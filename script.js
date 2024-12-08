@@ -55,23 +55,6 @@ filterOptions.forEach(btn => {
     });
 });
 
-const updateFilter = () => {
-    filterValue.innerHTML = `${filterSlider.value}%`; 
-    // console.log(filterSlider.value);
-    const selectedFilter = document.querySelector(".filter .active");
-    if (selectedFilter.id === "brightness") {
-        brightness = filterSlider.value
-    } else if (selectedFilter.id === "saturation") {
-        saturation = filterSlider.value
-    } else if (selectedFilter.id === "inversion") {
-        inversion = filterSlider.value
-    } else if (selectedFilter.id === "grayscale") {
-        grayscale = filterSlider.value
-    }
-
-    applyFilters();
-}
-
 
 rotateOptions.forEach(option => {
     option.addEventListener('click', () => {
@@ -91,7 +74,25 @@ rotateOptions.forEach(option => {
     });
  });
 
+ const updateFilter = () => {
+    filterValue.innerHTML = `${filterSlider.value}%`; 
+    // console.log(filterSlider.value);
+    const selectedFilter = document.querySelector(".filter .active");
+    if (selectedFilter.id === "brightness") {
+        brightness = filterSlider.value
+    } else if (selectedFilter.id === "saturation") {
+        saturation = filterSlider.value
+    } else if (selectedFilter.id === "inversion") {
+        inversion = filterSlider.value
+    } else if (selectedFilter.id === "grayscale") {
+        grayscale = filterSlider.value
+    }
 
-filterSlider.addEventListener("input", updateFilter);
-fileInput.addEventListener('change', loadImage);
+    applyFilters();
+}
+
+
+
 chooseImgBtn.addEventListener('click', () => { fileInput.click()});
+fileInput.addEventListener('change', loadImage);
+filterSlider.addEventListener("input", updateFilter);
