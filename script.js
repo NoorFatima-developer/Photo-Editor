@@ -27,15 +27,19 @@ filterOptions.forEach(btn => {
         console.log(`Active button changed to: ${btn.textContent}`); // Log active button
         filterName.innerHTML = btn.innerHTML; 
         if(btn.id === "brightness") {
+            filterSlider.max = "200";
             filterSlider.value = brightness;
             filterValue.innerHTML = `${brightness}%`
         } else if (btn.id === "saturation") {
+            filterSlider.max = "200";
             filterSlider.value = saturation;
             filterValue.innerHTML = `${saturation}%`
         } else if (btn.id === "inversion") {
+            filterSlider.max = "100";
             filterSlider.value = inversion
             filterValue.innerHTML = `${inversion}%`
         } else if (btn.id === "grayscale") {
+            filterSlider.max = "100";
             filterSlider.value = grayscale
             filterValue.innerHTML = `${grayscale}%`
         }
