@@ -2,6 +2,8 @@ const fileInput = document.querySelector('.file-input');
 const chooseImgBtn = document.querySelector('.choose-img');
 const previewImg = document.querySelector('.preview-img img');
 const filterOptions = document.querySelectorAll('.filter button');
+const filterName = document.querySelector('.filter-info .name');
+const filterSlider = document.querySelector('.filter-info input');
 
 const loadImage = () => {
     const file = fileInput.files[0];
@@ -18,8 +20,9 @@ filterOptions.forEach(btn => {
         if (activeButton) {
             activeButton.classList.remove('active'); // Remove active from current
         }
-        option.classList.add('active'); // Add active to clicked button
-        console.log(`Active button changed to: ${option.textContent}`); // Log active button
+        btn.classList.add('active'); // Add active to clicked button
+        console.log(`Active button changed to: ${btn.textContent}`); // Log active button
+        filterName.innerHTML = btn.innerHTML; 
     });
 });
 

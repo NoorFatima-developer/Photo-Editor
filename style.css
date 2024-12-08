@@ -15,10 +15,6 @@ body {
     min-height: 100vh;
 }
 
-.filter .options .active {
-    background-color: #5372f0; /* Change to your desired active color */
-    color: white;
-}
 
 .container {
     width: 850px;
@@ -78,17 +74,25 @@ body {
     width: calc(100% / 2 - 4px);
 }
 
-.filter .options button.active {
+.filter .options button {
+    background: white; 
+    color: black; 
+    transition: all 0.3s ease; 
+}
+
+
+.filter .options .active {
+    background-color: #5372f0; 
+    color: white;
+}
+
+.filter .options button.hover {
     background: #5372f0;
-    color: #fff;
-    border-color: #5372f0;
+    color: white;
+    border-color: #5372f0; 
 }
 
 
-.filter .options button:hover {
-  background: #5372f0;
-  color: black;
-}
 
 .editor-panel .rotate button {
     width: calc(100% / 4 - 3px);
