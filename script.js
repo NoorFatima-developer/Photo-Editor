@@ -107,20 +107,23 @@ const resetFilter = () => {
 function saveImage(){
     // console.log("Save Image Button Clicked");
     const canvas = document.createElement("canvas");    //create canvas element...
-    const ctx = canvas.getContext("2d");          //return drawing context on canvas...
+    const ctx = canvas.getContext("2d");                //return drawing context on canvas...
 
-    // canvas.width = previewImg.naturalWidth;   //set canvas width to image width...
-    // canvas.height = previewImg.naturalHeight;  //set canvas height to image height...
+    // canvas.width = previewImg.naturalWidth;          //set canvas width to image width...
+    // canvas.height = previewImg.naturalHeight;        //set canvas height to image height...
 
     // applying user selected filters to canvas filter:
     ctx.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale})`;
     ctx.translate(canvas.width / 2, canvas.height / 2);
+    if(rotate != 0) {
+        ctx.rotate(rotate * MathPI / 180);
+    }
     ctx.scale(flipHorizontal , flipVertical)
     ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);  //draw image on canvas...
-      // Now manually resize canvas to 100% width
-      canvas.style.width = '30%';  // Set width to 100% of parent container
-      canvas.style.height = '40%'; // Adjust height automatically to maintain aspect ratio
-      document.body.appendChild(canvas)
+    // Now manually resize canvas width...
+    canvas.style.width = '30%';  // Set width to 100% of parent container
+    canvas.style.height = '40%'; // Adjust height automatically to maintain aspect ratio
+    document.body.appendChild(canvas)
 }
 
 chooseImgBtn.addEventListener('click', () => { fileInput.click()});
