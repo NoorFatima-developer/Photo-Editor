@@ -114,11 +114,12 @@ function saveImage(){
 
     // applying user selected filters to canvas filter:
     ctx.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale})`;
+    ctx.scale(flipHorizontal , flipVertical)
     ctx.drawImage(previewImg, 0, 0, canvas.width, canvas.height);  //draw image on canvas...
       // Now manually resize canvas to 100% width
-      canvas.style.width = '50%';  // Set width to 100% of parent container
-      canvas.style.height = '50%'; // Adjust height automatically to maintain aspect ratio
-    document.body.appendChild(canvas)
+      canvas.style.width = '30%';  // Set width to 100% of parent container
+      canvas.style.height = '40%'; // Adjust height automatically to maintain aspect ratio
+      document.body.appendChild(canvas)
 }
 
 chooseImgBtn.addEventListener('click', () => { fileInput.click()});
