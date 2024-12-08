@@ -9,7 +9,7 @@ const filterSlider = document.querySelector('.filter input');
 let brightness = 100, saturation = 100, inversion = 0, grayscale = 0;
 
 const applyFilters = () => {
-    previewImg.style.filter = `brightness(${brightness}%) saturation(${saturation}%) inversion(${inversion}%) grayscale(${grayscale})`;
+    previewImg.style.filter= `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale})`;
 }
 
 
