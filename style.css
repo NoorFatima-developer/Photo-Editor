@@ -15,6 +15,11 @@ body {
     min-height: 100vh;
 }
 
+.filter .options .active {
+    background-color: #5372f0; /* Change to your desired active color */
+    color: white;
+}
+
 .container {
     width: 850px;
     background: #fff;
@@ -73,7 +78,7 @@ body {
     width: calc(100% / 2 - 4px);
 }
 
-.filter .options button.active {
+.filter .options button.active{
     background: #5372f0;
     color: #fff;
     border-color: #5372f0;
