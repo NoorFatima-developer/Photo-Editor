@@ -1,0 +1,1 @@
+const fileInput = document.querySelector('.file-input');
