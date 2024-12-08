@@ -31,10 +31,12 @@ body {
 .wrapper {
     display: flex;
     margin: 20px 0;
-    background-color: red;
+    /* background-color: red; */
     min-height: 335px;
 }
 
 .wrapper .editor-panel {
-    
+    border: 1px solid #ccc;
+    width: 280px;
+    padding: 15px 20px;
 }
