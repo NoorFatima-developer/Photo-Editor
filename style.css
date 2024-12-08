@@ -31,7 +31,7 @@ body {
 .wrapper {
     display: flex;
     margin: 20px 0;
-    background-color: red;
+    /* background-color: red; */
     min-height: 335px;
 }
 
@@ -127,6 +127,8 @@ body {
     border-radius: 3px;
     cursor: pointer;
     background: #fff;
+    color: white;
+    text-transform: uppercase;
  }
 
  .controls .reset-filter {
@@ -135,5 +137,11 @@ body {
  }
 
  .controls .choose-img {
-    
+    border: 1px solid #6c757d;
+    background: #6c757d;
+ }
+ .controls .save-img {
+    border: 1px solid #6c757d;
+    background: #5372f0;
+    margin-left: 5px;
  }
