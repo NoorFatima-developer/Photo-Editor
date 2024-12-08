@@ -103,3 +103,12 @@ body {
 .editor-panel .rotate button {
     margin-top: 17px;
 }
+
+.rotate button:nth-child(3),
+ .rotate button:nth-child(4) {
+    font-size: 18px;
+ }
+
+ .wrapper .preview-img {
+    
+ }
