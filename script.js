@@ -1,7 +1,7 @@
 const fileInput = document.querySelector('.file-input');
 const chooseImgBtn = document.querySelector('.choose-img');
 const previewImg = document.querySelector('.preview-img img');
-
+const filterOptions = document.querySelector('.filter button');
 const loadImage = () => {
     const file = fileInput.files[0];
     if(!file) return; //return if user hasn't selected file...
@@ -11,7 +11,7 @@ const loadImage = () => {
         document.querySelector(".container").classList.remove('disable');
     })
 
-
+}
 fileInput.addEventListener('change', loadImage)
 chooseImgBtn.addEventListener('click', () => {
     fileInput.click();
