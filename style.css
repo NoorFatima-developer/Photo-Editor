@@ -90,4 +90,6 @@ body {
 .editor-panel .slider .filter-info {
     display: flex;
     justify-content: space-between;
+    color: #464646;
+    font-size: 14px;
 }
