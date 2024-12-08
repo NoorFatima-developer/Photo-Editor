@@ -6,10 +6,13 @@ const rotateOptions = document.querySelectorAll('.rotate button');
 const filterName = document.querySelector('.filter-info .name');
 const filterValue = document.querySelector('.filter-info .value');
 const filterSlider = document.querySelector('.filter input');
+const resetFilterBtn = document.querySelector('.reset-filter');
 
 let brightness = 100, saturation = 100, inversion = 0, grayscale = 0;
+let rotate = 0, flipHorizontal = 1, flipVertical = 1;
 
 const applyFilters = () => {
+    previewImg.style.transform = `rotate(${rotate}deg) scale(${flipHorizontal}, ${flipVertical})`;
     previewImg.style.filter= `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale})`;
 }
 
@@ -68,6 +71,26 @@ const updateFilter = () => {
 
     applyFilters();
 }
+
+
+rotateOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        // console.log(option);
+
+        if(option.id === "left"){
+            rotate -= 90;
+        } else if(option.id === "right"){
+            rotate += 90;
+        } else if(option.id === "horizontal"){
+            flipHorizontal = flipHorizontal === 1 ? -1 : 1;
+        } else if(option.id === "vertical"){
+            flipVertical = flipVertical === 1 ? -1 : 1;
+        }
+
+        applyFilters();
+    });
+ });
+
 
 filterSlider.addEventListener("input", updateFilter);
 fileInput.addEventListener('change', loadImage);

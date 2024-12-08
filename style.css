@@ -130,6 +130,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-left: 20px;
+    overflow: hidden;
  }
 
  .preview-img img {
