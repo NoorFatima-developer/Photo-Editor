@@ -10,8 +10,12 @@ const loadImage = () => {
     previewImg.addEventListener('load', () => {
         document.querySelector(".container").classList.remove('disable');
     })
-
 }
+
+filterOptions.forEach((option) => {
+    option.addEventListener()
+})
+
 fileInput.addEventListener('change', loadImage)
 chooseImgBtn.addEventListener('click', () => {
     fileInput.click();
