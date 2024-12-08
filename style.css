@@ -82,3 +82,12 @@ body {
 .editor-panel .rotate button {
     width: calc(100% / 4 - 3px);
 }
+
+.editor-panel .slider {
+    margin-top: 12px;
+}
+
+.editor-panel .slider .filter-info {
+    display: flex;
+    justify-content: space-between;
+}
