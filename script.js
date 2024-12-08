@@ -17,7 +17,6 @@ const applyFilters = () => {
     previewImg.style.filter= `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale})`;
 }
 
-
 const loadImage = () => {
     const file = fileInput.files[0];
     if (!file) return; // Return if user hasn't selected a file...
@@ -109,3 +108,4 @@ chooseImgBtn.addEventListener('click', () => { fileInput.click()});
 fileInput.addEventListener('change', loadImage);
 filterSlider.addEventListener("input", updateFilter);
 resetFilterBtn.addEventListener("click", resetFilter);
+saveImgBtn.addEventListener('click', saveImage);
