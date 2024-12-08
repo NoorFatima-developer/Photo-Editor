@@ -7,8 +7,9 @@ const loadImage = () => {
     if(!file) return; //return if user hasn't selected file...
     // console.log(file);
     previewImg.src = URL.createObjectURL(file);     //passing the file url as preview img src
-}
-
+    previewImg.addEventListener('load', () => {
+        document.querySelector(".container").classList.remove('disable');
+    })
 
 fileInput.addEventListener('change', loadImage)
 chooseImgBtn.addEventListener('click', () => {
