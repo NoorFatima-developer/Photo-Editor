@@ -76,4 +76,9 @@ body {
 
 .filter .options button:hover {
   background: #f5f5f5;
+  color: black;
+}
+
+.editor-panel .rotate button {
+    width: calc(100% / 4 - 3px);
 }
