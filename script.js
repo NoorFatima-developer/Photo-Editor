@@ -6,7 +6,7 @@ const loadImage = () => {
     const file = fileInput.files[0];
     if(!file) return; //return if user hasn't selected file...
     // console.log(file);
-    previewImg.src = URL.createObjectURL(file);
+    previewImg.src = URL.createObjectURL(file);     //passing the file url as preview img src
 }
 
 
