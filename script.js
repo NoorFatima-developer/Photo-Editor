@@ -3,6 +3,7 @@ const chooseImgBtn = document.querySelector('.choose-img');
 const previewImg = document.querySelector('.preview-img img');
 const filterOptions = document.querySelectorAll('.filter button');
 const filterName = document.querySelector('.filter-info .name');
+const filterValue = document.querySelector('.filter-info .value');
 const filterSlider = document.querySelector('.filter input');
 
 const loadImage = () => {
@@ -27,8 +28,8 @@ filterOptions.forEach(btn => {
 });
 
 const updateFilter = () => {
+    filterValue.innerHTML = `${filterSlider.value}%`; 
     console.log(filterSlider.value);
-    
 }
 
 
