@@ -11,6 +11,7 @@ const loadImage = () => {
         document.querySelector(".container").classList.remove('disable');
     })
 
+
 fileInput.addEventListener('change', loadImage)
 chooseImgBtn.addEventListener('click', () => {
     fileInput.click();
