@@ -100,9 +100,11 @@ const resetFilter = () => {
  rotate = 0;
  flipHorizontal = 1;
  flipVertical = 1;
+ filterOptions[0].click();    // clicking brightness btn, so the brightness selected b default..
+ applyFilters();
 }
 
 chooseImgBtn.addEventListener('click', () => { fileInput.click()});
 fileInput.addEventListener('change', loadImage);
 filterSlider.addEventListener("input", updateFilter);
-resetFilterBtn.addEventListener("input", resetFilter);
+resetFilterBtn.addEventListener("click", resetFilter);
