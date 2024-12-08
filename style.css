@@ -59,8 +59,15 @@ body {
     height: 40px;
     font-size: 14px;
     color: #6c757d;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    border: 1px solid #aaa;
 }
 
 .editor-panel .filter button {
     width: calc(100% / 2 - 4px);
+}
+
+.filter button.active {
+    background: #5372f0;
 }
