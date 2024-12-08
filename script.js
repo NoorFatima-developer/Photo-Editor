@@ -54,9 +54,9 @@ const updateFilter = () => {
         brightness = filterSlider.value
     } else if (selectedFilter.id === "saturation") {
         saturation = filterSlider.value
-    } else if (selectedFilter.id === "Inversion") {
+    } else if (selectedFilter.id === "inversion") {
         inversion = filterSlider.value
-    } else if (selectedFilter.id === "Grayscale") {
+    } else if (selectedFilter.id === "grayscale") {
         grayscale = filterSlider.value
     }
     }
