@@ -114,6 +114,7 @@ function saveImage(){
 
     // applying user selected filters to canvas filter:
     ctx.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale})`;
+    ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.scale(flipHorizontal , flipVertical)
     ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);  //draw image on canvas...
       // Now manually resize canvas to 100% width
