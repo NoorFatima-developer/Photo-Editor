@@ -73,3 +73,7 @@ body {
     color: #fff;
     border-color: #5372f0;
 }
+
+.filter .options button:hover {
+  background: #f5f5f5;
+}
