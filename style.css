@@ -39,4 +39,19 @@ body {
     border: 1px solid #ccc;
     width: 280px;
     padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.editor-panel .title {
+    display: block;
+    background-color: red;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.editor-panel .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
