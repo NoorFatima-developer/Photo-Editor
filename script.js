@@ -92,7 +92,17 @@ rotateOptions.forEach(option => {
 }
 
 
+const resetFilter = () => {
+ brightness = 100;
+ saturation = 100;
+ inversion = 0; 
+ grayscale = 0;
+ rotate = 0;
+ flipHorizontal = 1;
+ flipVertical = 1;
+}
 
 chooseImgBtn.addEventListener('click', () => { fileInput.click()});
 fileInput.addEventListener('change', loadImage);
 filterSlider.addEventListener("input", updateFilter);
+resetFilterBtn.addEventListener("input", resetFilter);
