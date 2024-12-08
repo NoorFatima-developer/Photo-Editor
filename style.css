@@ -68,6 +68,8 @@ body {
     width: calc(100% / 2 - 4px);
 }
 
-.filter button.active {
+.filter .options button.active {
     background: #5372f0;
+    color: #fff;
+    border-color: #5372f0;
 }
