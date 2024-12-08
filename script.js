@@ -124,6 +124,13 @@ function saveImage(){
     canvas.style.width = '30%';  // Set width to 100% of parent container
     canvas.style.height = '40%'; // Adjust height automatically to maintain aspect ratio
     document.body.appendChild(canvas)
+
+    // download image:
+
+    const link = document.createElement('a');
+    link.download = 'image.png';        //passing download value to image.png
+    link.href = canvas.toDataURL('image/png');      //passing href value to canvas
+    link.click();   //click <a> to download the image...
 }
 
 chooseImgBtn.addEventListener('click', () => { fileInput.click()});
