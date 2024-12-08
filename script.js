@@ -7,6 +7,7 @@ const filterName = document.querySelector('.filter-info .name');
 const filterValue = document.querySelector('.filter-info .value');
 const filterSlider = document.querySelector('.filter input');
 const resetFilterBtn = document.querySelector('.reset-filter');
+const saveImgBtn = document.querySelector('.save-img');
 
 let brightness = 100, saturation = 100, inversion = 0, grayscale = 0;
 let rotate = 0, flipHorizontal = 1, flipVertical = 1;
