@@ -104,6 +104,11 @@ const resetFilter = () => {
  applyFilters();
 }
 
+function saveImage(){
+    console.log("Save Image Button Clicked");
+    
+}
+
 chooseImgBtn.addEventListener('click', () => { fileInput.click()});
 fileInput.addEventListener('change', loadImage);
 filterSlider.addEventListener("input", updateFilter);
