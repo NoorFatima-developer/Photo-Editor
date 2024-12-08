@@ -13,5 +13,9 @@ const loadImage = () => {
 fileInput.addEventListener('change', loadImage)
 chooseImgBtn.addEventListener('click', () => {
     fileInput.click();
-  });
-  
+});
+
+
+
+
+
