@@ -26,15 +26,36 @@ filterOptions.forEach(btn => {
         btn.classList.add('active'); // Add active to clicked button
         console.log(`Active button changed to: ${btn.textContent}`); // Log active button
         filterName.innerHTML = btn.innerHTML; 
+        if(btn.id === "brightness") {
+            filterSlider.value = brightness;
+            filterValue.innerHTML = `${brightness}%`
+        } else if (btn.id === "saturation") {
+            filterSlider.value = saturation;
+            filterValue.innerHTML = `${saturation}%`
+        } else if (btn.id === "inversion") {
+            filterSlider.value = inversion
+            filterValue.innerHTML = `${inversion}%`
+        } else if (btn.id === "grayscale") {
+            filterSlider.value = grayscale
+            filterValue.innerHTML = `${grayscale}%`
+        }
     });
 });
 
 const updateFilter = () => {
     filterValue.innerHTML = `${filterSlider.value}%`; 
-    console.log(filterSlider.value);
-}
-
-
+    // console.log(filterSlider.value);
+    const selectedFilter = document.querySelector(".filter .active");
+    if (selectedFilter.id === "brightness") {
+        brightness = filterSlider.value
+    } else if (selectedFilter.id === "saturation") {
+        saturation = filterSlider.value
+    } else if (selectedFilter.id === "Inversion") {
+        inversion = filterSlider.value
+    } else if (selectedFilter.id === "Grayscale") {
+        grayscale = filterSlider.value
+    }
+    }
 filterSlider.addEventListener("input", updateFilter);
 fileInput.addEventListener('change', loadImage);
 chooseImgBtn.addEventListener('click', () => { fileInput.click()});
