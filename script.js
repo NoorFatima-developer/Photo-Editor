@@ -8,6 +8,11 @@ const filterSlider = document.querySelector('.filter input');
 
 let brightness = 100, saturation = 100, inversion = 0, grayscale = 0;
 
+const applyFilters = () => {
+    previewImg.style.filter = `brightness(${brightness}%) saturation(${saturation}%) inversion(${inversion}%) grayscale(${grayscale})`;
+}
+
+
 const loadImage = () => {
     const file = fileInput.files[0];
     if (!file) return; // Return if user hasn't selected a file...
@@ -59,7 +64,10 @@ const updateFilter = () => {
     } else if (selectedFilter.id === "grayscale") {
         grayscale = filterSlider.value
     }
-    }
+
+    applyFilters();
+}
+
 filterSlider.addEventListener("input", updateFilter);
 fileInput.addEventListener('change', loadImage);
 chooseImgBtn.addEventListener('click', () => { fileInput.click()});
