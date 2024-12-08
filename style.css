@@ -27,3 +27,14 @@ body {
     font-size: 22px;
     font-weight: 500;
 }
+
+.wrapper {
+    display: flex;
+    margin: 20px 0;
+    background-color: red;
+    min-height: 335px;
+}
+
+.wrapper .editor-panel {
+    
+}
